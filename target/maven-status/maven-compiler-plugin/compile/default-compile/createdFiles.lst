@@ -1,0 +1,10 @@
+org\example\CommonActions.class
+dataProvider\ConfigFileReader.class
+org\example\elements\HomePage.class
+org\example\elements\SearchPage.class
+org\example\alertServiceTest\AlertService.class
+org\example\alertServiceTest\AlertDAO.class
+org\example\alertServiceTest\AlertTestClass.class
+service\UserData.class
+org\example\alertServiceTest\MapAlertDAO.class
+service\RestAssuredExample.class
