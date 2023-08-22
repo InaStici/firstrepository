@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
                 "json:build/cucumber.json",
                 "timeline:build/timeReport"},
         glue = {
-                "src/test/java/tests/stepdefinitions/StepDefinitions.java"
+                "tests.stepdefinitions.StepDefinitions.java"
         },
         tags = ""
 )

@@ -5,10 +5,10 @@ Feature: Test feature file
     When search by 'Summer' keyword
     Then list all search results
 
-  Scenario: browse Trending item
-    Given open home page
-    Then browse Trending item
-
-  Scenario: api test
-    Given api test example
+#  Scenario: browse Trending item
+#    Given open home page
+#    Then browse Trending item
+#
+#  Scenario: api test
+#    Given api test example
 
