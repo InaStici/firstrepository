@@ -1,4 +1,4 @@
-Feature: Test feature
+Feature: Test feature file
 
   Scenario : Search books by author
     Given open home page
