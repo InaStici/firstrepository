@@ -1,19 +1,25 @@
 package org.example.elements;
 
 import dataProvider.ConfigFileReader;
+import jdk.jfr.Name;
 import org.example.CommonActions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import java.util.concurrent.TimeUnit;
-
 
 public class HomePage extends CommonActions {
 
     @FindBy(xpath = "//div[@class = 'logo-txt']")
     public WebElement logo;
+
+    @Name("Sign Up")
+    @FindBy(xpath = "//a[@class  = 'btn primary' and text() = 'Sign Up']")
+    public WebElement signUpBtn;
+
+    @FindBy(xpath = "//a[@class  = 'btn' and text() = 'Log In']")
+    public WebElement logInBtn;
 
     @FindBy(xpath = "//div[@class = 'search-component']//input[@name = 'q']")
     public WebElement searchInput;
@@ -35,12 +41,6 @@ public class HomePage extends CommonActions {
         this.driver = driver;
         PageFactory.initElements(driver, this);
         configFileReader = new ConfigFileReader();
-    }
-
-    public void openHomePage() {
-        driver.get(configFileReader.getUrl());
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
     }
 
     public void displayLogo() {

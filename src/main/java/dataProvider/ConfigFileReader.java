@@ -11,7 +11,7 @@ public class ConfigFileReader {
     private Properties properties;
     private final String propertyFilePath = "configs//Config.properties";
 
-    public ConfigFileReader(){
+    public ConfigFileReader() {
         BufferedReader reader;
         try {
             reader = new BufferedReader(new FileReader(propertyFilePath));
@@ -28,21 +28,41 @@ public class ConfigFileReader {
         }
     }
 
-    public String getDriverPath(){
+    public String getDriverPath() {
         String driverPath = properties.getProperty("driverPath");
-        if(driverPath!= null) return driverPath;
+        if (driverPath != null) return driverPath;
         else throw new RuntimeException("driverPath not specified in the Configuration.properties file.");
     }
 
     public long getImplicitlyWait() {
         String implicitlyWait = properties.getProperty("implicitWaitTime");
-        if(implicitlyWait != null) return Long.parseLong(implicitlyWait);
+        if (implicitlyWait != null) return Long.parseLong(implicitlyWait);
         else throw new RuntimeException("implicitlyWait not specified in the Configuration.properties file.");
     }
 
     public String getUrl() {
         String url = properties.getProperty("url");
-        if(url != null) return url;
+        if (url != null) return url;
         else throw new RuntimeException("url not specified in the Configuration.properties file.");
+    }
+
+    public String getEmail() {
+        return properties.getProperty("email");
+    }
+
+    public String getRegisteredEmail() {
+        return properties.getProperty("registeredEmail");
+    }
+
+    public String getUserName() {
+        return properties.getProperty("userName");
+    }
+
+    public String getInvalidUserName() {
+        return properties.getProperty("invalidUserName");
+    }
+
+    public String getPassword() {
+        return properties.getProperty("password");
     }
 }
