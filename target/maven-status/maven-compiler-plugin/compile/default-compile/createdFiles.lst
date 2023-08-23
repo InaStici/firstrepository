@@ -1,3 +1,4 @@
+org\example\elements\AccountCreatePage.class
 org\example\CommonActions.class
 dataProvider\ConfigFileReader.class
 org\example\elements\HomePage.class

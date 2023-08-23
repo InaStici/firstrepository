@@ -8,5 +8,5 @@ Feature: Log in and Log out functionalities
 
   Scenario: Log in with a wrong password
     Given user opens OpenLibrary home page
-    When user logs in with invalid password
+    When user logs in with invalid passwoTrd
     Then wrong password message is displayed
